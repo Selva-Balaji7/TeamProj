@@ -63,8 +63,7 @@
               "RelativeToolTip": "Controllers\\EmployeeController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAACcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-15T11:22:27.874Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-15T11:22:27.874Z"
             },
             {
               "$type": "Document",
@@ -76,8 +75,7 @@
               "RelativeToolTip": "Program.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-15T08:16:32.36Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-15T08:16:32.36Z"
             },
             {
               "$type": "Document",
@@ -85,12 +83,11 @@
               "Title": "AdminController.cs",
               "DocumentMoniker": "D:\\Attendance_Management\\Back-End\\AttendanceTask\\Controllers\\AdminController.cs",
               "RelativeDocumentMoniker": "Controllers\\AdminController.cs",
-              "ToolTip": "D:\\Attendance_Management\\Back-End\\AttendanceTask\\Controllers\\AdminController.cs*",
-              "RelativeToolTip": "Controllers\\AdminController.cs*",
+              "ToolTip": "D:\\Attendance_Management\\Back-End\\AttendanceTask\\Controllers\\AdminController.cs",
+              "RelativeToolTip": "Controllers\\AdminController.cs",
               "ViewState": "AgIAAAgAAAAAAAAAAAAxwBYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-15T11:10:11.43Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-15T11:10:11.43Z"
             },
             {
               "$type": "Document",
@@ -102,8 +99,7 @@
               "RelativeToolTip": "Controllers\\AttendanceController.cs",
               "ViewState": "AgIAACAAAAAAAAAAAAAwwDQAAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-15T09:56:31.069Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-15T09:56:31.069Z"
             },
             {
               "$type": "Document",
