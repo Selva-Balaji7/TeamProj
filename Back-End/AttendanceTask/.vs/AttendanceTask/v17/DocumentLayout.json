@@ -1,31 +1,30 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\TEAM_PROJ\\Back-End\\AttendanceTask\\",
+  "WorkspaceRootPath": "D:\\Attendance_Management\\Back-End\\AttendanceTask\\",
   "Documents": [
     {
-<<<<<<< HEAD
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\TEAM_PROJ\\Back-End\\AttendanceTask\\Models\\AttendanceDbContext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Models\\AttendanceDbContext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C6F0FD6C-5085-4313-8BB4-2D4D3A6B8FB2}|AttendanceTask.csproj|d:\\attendance_management\\back-end\\attendancetask\\models\\attendancedbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C6F0FD6C-5085-4313-8BB4-2D4D3A6B8FB2}|AttendanceTask.csproj|solutionrelative:models\\attendancedbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\TEAM_PROJ\\Back-End\\AttendanceTask\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{C6F0FD6C-5085-4313-8BB4-2D4D3A6B8FB2}|AttendanceTask.csproj|d:\\attendance_management\\back-end\\attendancetask\\controllers\\employeecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C6F0FD6C-5085-4313-8BB4-2D4D3A6B8FB2}|AttendanceTask.csproj|solutionrelative:controllers\\employeecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\TEAM_PROJ\\Back-End\\AttendanceTask\\Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-=======
+      "AbsoluteMoniker": "D:0:0:{C6F0FD6C-5085-4313-8BB4-2D4D3A6B8FB2}|AttendanceTask.csproj|d:\\attendance_management\\back-end\\attendancetask\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C6F0FD6C-5085-4313-8BB4-2D4D3A6B8FB2}|AttendanceTask.csproj|solutionrelative:controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C6F0FD6C-5085-4313-8BB4-2D4D3A6B8FB2}|AttendanceTask.csproj|d:\\attendance_management\\back-end\\attendancetask\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C6F0FD6C-5085-4313-8BB4-2D4D3A6B8FB2}|AttendanceTask.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{C6F0FD6C-5085-4313-8BB4-2D4D3A6B8FB2}|AttendanceTask.csproj|d:\\attendance_management\\back-end\\attendancetask\\controllers\\attendancecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C6F0FD6C-5085-4313-8BB4-2D4D3A6B8FB2}|AttendanceTask.csproj|solutionrelative:controllers\\attendancecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C6F0FD6C-5085-4313-8BB4-2D4D3A6B8FB2}|AttendanceTask.csproj|d:\\attendance_management\\back-end\\attendancetask\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{C6F0FD6C-5085-4313-8BB4-2D4D3A6B8FB2}|AttendanceTask.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C6F0FD6C-5085-4313-8BB4-2D4D3A6B8FB2}|AttendanceTask.csproj|d:\\attendance_management\\back-end\\attendancetask\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C6F0FD6C-5085-4313-8BB4-2D4D3A6B8FB2}|AttendanceTask.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
->>>>>>> Bejesh
     }
   ],
   "DocumentGroupContainers": [
@@ -44,48 +43,79 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-<<<<<<< HEAD
               "Title": "AttendanceDbContext.cs",
-              "DocumentMoniker": "C:\\TEAM_PROJ\\Back-End\\AttendanceTask\\Models\\AttendanceDbContext.cs",
+              "DocumentMoniker": "D:\\Attendance_Management\\Back-End\\AttendanceTask\\Models\\AttendanceDbContext.cs",
               "RelativeDocumentMoniker": "Models\\AttendanceDbContext.cs",
-              "ToolTip": "C:\\TEAM_PROJ\\Back-End\\AttendanceTask\\Models\\AttendanceDbContext.cs",
+              "ToolTip": "D:\\Attendance_Management\\Back-End\\AttendanceTask\\Models\\AttendanceDbContext.cs",
               "RelativeToolTip": "Models\\AttendanceDbContext.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
-=======
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-15T11:52:09.019Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "EmployeeController.cs",
+              "DocumentMoniker": "D:\\Attendance_Management\\Back-End\\AttendanceTask\\Controllers\\EmployeeController.cs",
+              "RelativeDocumentMoniker": "Controllers\\EmployeeController.cs",
+              "ToolTip": "D:\\Attendance_Management\\Back-End\\AttendanceTask\\Controllers\\EmployeeController.cs",
+              "RelativeToolTip": "Controllers\\EmployeeController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-15T11:22:27.874Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\Attendance_Management\\Back-End\\AttendanceTask\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "D:\\Attendance_Management\\Back-End\\AttendanceTask\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-15T08:16:32.36Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "AdminController.cs",
+              "DocumentMoniker": "D:\\Attendance_Management\\Back-End\\AttendanceTask\\Controllers\\AdminController.cs",
+              "RelativeDocumentMoniker": "Controllers\\AdminController.cs",
+              "ToolTip": "D:\\Attendance_Management\\Back-End\\AttendanceTask\\Controllers\\AdminController.cs*",
+              "RelativeToolTip": "Controllers\\AdminController.cs*",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAxwBYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-15T11:10:11.43Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "AttendanceController.cs",
               "DocumentMoniker": "D:\\Attendance_Management\\Back-End\\AttendanceTask\\Controllers\\AttendanceController.cs",
               "RelativeDocumentMoniker": "Controllers\\AttendanceController.cs",
               "ToolTip": "D:\\Attendance_Management\\Back-End\\AttendanceTask\\Controllers\\AttendanceController.cs",
               "RelativeToolTip": "Controllers\\AttendanceController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAFIAAABBAAAAAAAAAA==",
->>>>>>> Bejesh
+              "ViewState": "AgIAACAAAAAAAAAAAAAwwDQAAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-01-15T09:56:31.069Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 5,
               "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\TEAM_PROJ\\Back-End\\AttendanceTask\\appsettings.json",
+              "DocumentMoniker": "D:\\Attendance_Management\\Back-End\\AttendanceTask\\appsettings.json",
               "RelativeDocumentMoniker": "appsettings.json",
-              "ToolTip": "C:\\TEAM_PROJ\\Back-End\\AttendanceTask\\appsettings.json",
+              "ToolTip": "D:\\Attendance_Management\\Back-End\\AttendanceTask\\appsettings.json",
               "RelativeToolTip": "appsettings.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAADwAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
               "WhenOpened": "2025-01-15T08:33:56.859Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\TEAM_PROJ\\Back-End\\AttendanceTask\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "C:\\TEAM_PROJ\\Back-End\\AttendanceTask\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-15T08:16:32.36Z"
             }
           ]
         }

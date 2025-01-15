@@ -28,6 +28,8 @@ create table attendance(
     outTime time default null
 ); 
 
+insert into attendance values
+(4580, 'Bejesh', '9:30', '6:30');
 
 select * from employees;
 select * from admins;

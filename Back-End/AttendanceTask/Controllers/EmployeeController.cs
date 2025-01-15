@@ -1,5 +1,6 @@
 ﻿using AttendanceTask.Models;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 namespace AttendanceTask.Controllers
 {
@@ -7,33 +8,64 @@ namespace AttendanceTask.Controllers
     [Route("api/[controller]")]
     public class EmployeeController : Controller
     {
-        //public IActionResult Index()
-        //{
-        //    return View();
-        //}
 
-        private static readonly List<Employee> Employee = new List<Employee>
-        {
-            new Employee { EmpId = 1 , EmpName = "" },
-            new Employee { EmpId = 2 , EmpName = "" },
-            new Employee { EmpId = 3 , EmpName = "" }
-        };
+        private readonly AttendanceDbContext _context;
 
-        [HttpGet]
-        public IEnumerable<Employee> GetEmployees()
+
+        public EmployeeController(AttendanceDbContext context)
         {
-            return Ok(Employee);
+            _context = context;
         }
 
+        [HttpGet]
+        public async Task<ActionResult<IEnumerable<Employee>>> GetEmployee()
+        {
+            return await _context.Employees.ToListAsync();
+        }
+
+        [HttpGet("{EmpId}")]
+        public async Task<ActionResult<Employee>> GetEmployee(int EmpId)
+        {
+            var employee = await _context.Employees.FindAsync(EmpId);
+
+            if (employee == null)
+            {
+                return NotFound();
+            }
+
+            return employee;
+        }
+
+
+
         [HttpPost]
-        public ActionResult 
-            Post([FromBody] Reservation res) =>
-           repository.AddReservation(new Reservation
-           {
-               Id = res.Id,
-               Name = res.Name,
-               StartLocation = res.StartLocation,
-               EndLocation = res.EndLocation
-           });
+        public async Task<ActionResult<Employee>> PostEmployee(Employee employee)
+        {
+            _context.Employees.Add(employee);
+            await _context.SaveChangesAsync();
+
+            return CreatedAtAction("GetEmployee", new { EmpId = employee.EmpId }, employee);
+
+        }
+
+
+        [HttpDelete("{EmpId}")]
+        public async Task<IActionResult> DeleteEmployee(int EmpId)
+        {
+            var employee = await _context.Employees.FindAsync(EmpId);
+            if (employee == null)
+            {
+                return NotFound();
+            }
+
+            _context.Employees.Remove(employee);
+            await _context.SaveChangesAsync();
+
+            return NoContent();
+        }
+
+
+
+
     }
 }
