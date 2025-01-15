@@ -4966,23 +4966,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\bejesh.sriram\\.nuget\\packages\\": {},
+    "C:\\Users\\sankaresan.s\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Attendance_Management\\Back-End\\AttendanceTask\\AttendanceTask.csproj",
+      "projectUniqueName": "C:\\TEAM_PROJ\\Back-End\\AttendanceTask\\AttendanceTask.csproj",
       "projectName": "AttendanceTask",
-      "projectPath": "D:\\Attendance_Management\\Back-End\\AttendanceTask\\AttendanceTask.csproj",
-      "packagesPath": "C:\\Users\\bejesh.sriram\\.nuget\\packages\\",
-      "outputPath": "D:\\Attendance_Management\\Back-End\\AttendanceTask\\obj\\",
+      "projectPath": "C:\\TEAM_PROJ\\Back-End\\AttendanceTask\\AttendanceTask.csproj",
+      "packagesPath": "C:\\Users\\sankaresan.s\\.nuget\\packages\\",
+      "outputPath": "C:\\TEAM_PROJ\\Back-End\\AttendanceTask\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\bejesh.sriram\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\sankaresan.s\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -4991,6 +4991,7 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
