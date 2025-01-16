@@ -1,10 +1,12 @@
-import logo from './logo.svg';
-import './App.css';
+//import logo from './logo.svg';
+//import './App.css';
+import HomeComp from './Layouts/HomeComp';
 import LoginComp from './Layouts/LoginComp';
 
 function App() {
   return (
     <div className="App">
+      {/* <header className="App-header">
       {/* {
         <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
@@ -20,10 +22,9 @@ function App() {
         >
           Learn React
         </a>
-      </header>
-      } */}
-
-      <LoginComp></LoginComp>
+      </header> */}
+      {/* <HomeComp></HomeComp>
+      <LoginComp></LoginComp> */}
     </div>
   );
 }

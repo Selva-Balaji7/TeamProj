@@ -1,10 +1,10 @@
 import React, { useRef } from 'react'
-// import "../css/LoginCom.css"
-import "./LoginComp.css"
+import  {useNavigate} from 'react-router-dom';
+import axios from 'axios';
+
+import "./External.css"
 
 const LoginComp = () => {
-
-
 
     const nav = useNavigate();
 
@@ -37,7 +37,7 @@ const LoginComp = () => {
             }
             else {
                 window.alert("wrong crediantials");
-                uidRef.current.value = "";
+                unameRef.current.value = "";
                 upassRef.current.value = "";
             }
 
