@@ -20,6 +20,8 @@ namespace AttendanceTask.Controllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Attendance>>> GetAttendance()
         {
+            Console.Clear();
+            Console.WriteLine("---------------------GET REQUEST---------------------------");
             return await _context.Attendances.ToListAsync();
         }
 
@@ -41,6 +43,9 @@ namespace AttendanceTask.Controllers
         [HttpPost]
         public async Task<ActionResult<Attendance>> PostAttendance(Attendance attendance)
         {
+            Console.Clear();
+            Console.WriteLine("---------------------POST REQUEST---------------------------");
+            Console.WriteLine(attendance);
             _context.Attendances.Add(attendance);
             await _context.SaveChangesAsync();
 
@@ -53,7 +58,8 @@ namespace AttendanceTask.Controllers
         [HttpPut("{EmpId}")]
         public async Task<ActionResult> PutAttendance(int EmpId, Attendance attendance)
         {
-            if(EmpId != attendance.EmpId)
+            Console.WriteLine("---------------------PUT REQUEST---------------------------");
+            if (EmpId != attendance.EmpId)
             {
                 return BadRequest();
             }
