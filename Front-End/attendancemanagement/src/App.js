@@ -1,5 +1,5 @@
 //import logo from './logo.svg';
-import './App.css';
+//import './App.css';
 import HomeComp from './Layouts/HomeComp';
 import LoginComp from './Layouts/LoginComp';
 
@@ -23,8 +23,8 @@ function App() {
           Learn React
         </a>
       </header> */}
-      <HomeComp></HomeComp>
-      <LoginComp></LoginComp>
+      {/* <HomeComp></HomeComp>
+      <LoginComp></LoginComp> */}
     </div>
   );
 }
