@@ -1,17 +1,16 @@
-import React from "react"
+import React from 'react';
+import {Link} from "react-router-dom";
 import "./External.css"
 
 const HomeComp = () => {
     return (
         <div>
-
-
         <div className="card">
         <div className="card-header" style={{ backgroundColor:"#13b2e3",justifyContent:"center",textAlign:"center"}}>
         <b>Employee Attendance System</b> 
         </div>
         <div className="card-body">
-        <ul className="list-group list-group-flush">
+        <ul className="list-group list-group-flush" style={{justifyContent:"center",textAlign:"center"}}>
         <li className="list-group-item">
         <Link to="addemployee" className='btn btn-primary mt-2'>Add New Employee</Link>
         </li>

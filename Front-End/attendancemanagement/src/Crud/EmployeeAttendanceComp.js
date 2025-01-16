@@ -9,7 +9,7 @@ const EmployeeAttendanceComp = () => {
         const [error, setError] = useState("");
      
     
-        const handleMarkAttendance = (id) => {
+        const handleMarkAttendance = (eid) => {
     
             const currentDate=new Date().toLocaleDateString();
             const currentTime=new Date().toLocaleTimeString();
@@ -67,12 +67,11 @@ return(
                 
             )}
 
-        <button type='button' onClick={() => handleMarkAttendance(val.id)} className='btn btn-primary '>Mark Attendance</button>                    
+        <button type='button' onClick={() => handleMarkAttendance(val.eid)} className='btn btn-primary '>Mark Attendance</button>                    
               
 
     </div>
 )
 
-
-
 }
+export default EmployeeAttendanceComp;

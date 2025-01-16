@@ -1,13 +1,21 @@
     .card{
-        position: relative;
-        top: 100px;
-        width: 500px;
-        height: 520px;
-        margin: auto;
-        border-radius: 10px;
+    position: relative;
+    top: 147px;
+    width: 600px;
+    height: 500px;
+    margin: auto;
+    border-radius: 50px;
     }
     .card-header{
-        height: 100px;
-        
-
+        height: 130px;
+        align-content: center;
+        font-family: cursive;
+        font-size: xx-large;
+    }
+    .card-body{
+       
+    }
+    .list-group-item{
+    height: 150px;
+    align-content: center;
     }
