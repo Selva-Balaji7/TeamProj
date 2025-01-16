@@ -12,7 +12,7 @@ const HomeComp = () => {
         <div className="card-body">
         <ul className="list-group list-group-flush" style={{justifyContent:"center",textAlign:"center"}}>
         <li className="list-group-item">
-        <Link to="addemployee" className='btn btn-primary mt-2'>Add New Employee</Link>
+        <Link to="login" className='btn btn-primary mt-2'>Add New Employee</Link>
         </li>
         <li className="list-group-item">
         <Link to="listemployee" className="btn btn-info btm-sm me-4">List Employees</Link>

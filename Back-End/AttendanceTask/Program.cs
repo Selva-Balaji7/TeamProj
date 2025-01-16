@@ -1,7 +1,25 @@
+using AttendanceTask.Models;
+using Microsoft.EntityFrameworkCore;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+
+builder.Services.AddDbContext<AttendanceDbContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+
+
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowAllOrigins",
+        builder =>
+        {
+            builder.AllowAnyOrigin()  // Allows any origin
+                   .AllowAnyMethod()  // Allows any HTTP method (GET, POST, etc.)
+                   .AllowAnyHeader(); // Allows any header
+        });
+});
 
 var app = builder.Build();
 
@@ -13,10 +31,14 @@ if (!app.Environment.IsDevelopment())
     app.UseHsts();
 }
 
+
+
 app.UseHttpsRedirection();
 app.UseStaticFiles();
 
 app.UseRouting();
+
+app.UseCors("AllowAllOrigins");
 
 app.UseAuthorization();
 
