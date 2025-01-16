@@ -7,65 +7,77 @@ const EmployeeAttendanceComp = () => {
     let attendanceObj={
         empId: "",
         empName:"",
-        inTime:"",
-        outTime:""
+        inTime:null,
+        outTime:null
     };
 
     const [employee, setEmployee] = useState([        ]);
 
         const [attendance, setAttendance] = useState([        ]);
 
-        const [userempId, setUserempId] = useState(0);
+        const [userempId, setUserempId] = useState("");
 
         const [error, setError] = useState("");
 
         let emp = null;
 
-        // /*
-        useEffect(() => {
+        const getAttendance = () =>{
             GET("/api/Attendance")
                 .then((res)=>setAttendance(res.data))
                 .catch((error)=>setError("Unable to Fetch Attendance List"+error));
-
+        }
+        const getEmployee = () => {
             GET("/api/Employee")
                 .then((res)=>{
                     setEmployee(res.data);
                 })
                 .catch((error)=>setError("Unable to Fetch Employee List"+error));
         }
+
+        // /*
+        useEffect(() => {
+            
+            getAttendance();
+            getEmployee();
+        }
         ,[]);
         // */
+
+
+        
+
      
     
         const handleMarkAttendance = (event) => {
-            // event.preventDefault();
+
             const currentTime=new Date().toLocaleTimeString('en-GB', {hour12:false});
-            console.log("Current Time",currentTime);
-            console.log("User EMp Id",userempId);
 
             let attIndex = -1;
             attendance.map((val, ind) => {
                 if(val.empId == userempId) attIndex = ind;
             })
 
+            emp = employee.filter((val) =>{
+                return val.empId == userempId;
+            })[0];
+
             //IF ATTENDANCE NOT FOUND
             if(attIndex == -1){
-                console.log("IF ATTENDANCE NOT FOUND");
-                emp = employee.filter((val) =>{
-                    return val.empId == userempId;
-                })[0];
+                
 
                 //IF EMPLOYEE NOT FOUND
                 if(emp == null){
-                    console.log("IF EMPLOYEE NOT FOUND");
                     setError("Unable to find Employee, Contact Admin to Add you");
                 }
                 //IF EMPLOYEE FOUND
                 else{
-                    console.log("IF EMPLOYEE FOUND", {...emp});
-                    attendanceObj = {...emp, inTime:currentTime, outTime:""};
-                    
-                    console.log(attendanceObj);
+                    attendanceObj = {
+                        empId:emp.empId,
+                        empName:emp.empName,
+                        inTime:currentTime, 
+                        outTime:null, 
+                    };
+
                     POST("/api/Attendance", attendanceObj)
                         .then(()=>{
                             window.alert("Logged Successfully");
@@ -80,7 +92,15 @@ const EmployeeAttendanceComp = () => {
             {
                 //IF outTime IS EMPTY
                 if(attendance[attIndex].outTime == null){
-                    attendanceObj = {...attendance[attIndex], outTime:{currentTime}};
+
+                    attendanceObj = {
+                        empId:emp.empId,
+                        empName:emp.empName,
+                        inTime:attendance[attIndex].inTime, 
+                        outTime:currentTime, 
+                    };
+                    
+
                     PUT(`/api/Attendance/${attendanceObj.empId}`, attendanceObj)
                         .then(()=>window.alert("Loggout Successfully"))
                         .catch(()=>setError("Unable to Loggout"));
