@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("AttendanceTask")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8d031e650a1bafea8c4f3d8926ad378aa80a6178")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4d878d39633e6abd447e40914baad343e829409f")]
 [assembly: System.Reflection.AssemblyProductAttribute("AttendanceTask")]
 [assembly: System.Reflection.AssemblyTitleAttribute("AttendanceTask")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
