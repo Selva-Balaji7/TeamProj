@@ -16,10 +16,10 @@ const HomeComp = () => {
         <Link to="addemployee" className='btn btn-primary mt-2'>Add New Employee</Link>
         </li>
         <li className="list-group-item">
-        <Link to="listemployee" className="btn btn-info btm-sm me-4">List Employee</Link>
+        <Link to="listemployee" className="btn btn-info btm-sm me-4">List Employees</Link>
         </li>
         <li className="list-group-item">
-         <Link to="attendance" className="btn btn-success btm-sm me-4">Employee Attendance</Link>
+         <Link to="attendance" className="btn btn-success btm-sm me-4">show Attendance</Link>
         </li>
         </ul>
         </div>
