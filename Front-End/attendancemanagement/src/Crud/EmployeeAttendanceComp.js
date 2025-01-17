@@ -1,6 +1,8 @@
 import React, { useEffect, useState} from 'react'
-import { GET, POST, PUT } from '../Shared/HttpService';
-import axios from 'axios';
+import { DELETE, GET, POST, PUT } from '../Shared/HttpService';
+import modcss from '../css/EmployeeAttendanceComp.module.css'
+import ClearIcon from '@mui/icons-material/Clear';
+import HighlightOffIcon from '@mui/icons-material/HighlightOff';
 
 const EmployeeAttendanceComp = () => {
 
@@ -17,21 +19,21 @@ const EmployeeAttendanceComp = () => {
 
         const [userempId, setUserempId] = useState("");
 
-        const [error, setError] = useState("");
+        const [error, setError] = useState([]);
 
         let emp = null;
 
         const getAttendance = () =>{
             GET("/api/Attendance")
                 .then((res)=>setAttendance(res.data))
-                .catch((error)=>setError("Unable to Fetch Attendance List"+error));
+                .catch((error)=>setError((curerror)=>[...curerror, "Unable to Fetch Attendance List"+error]));
         }
         const getEmployee = () => {
             GET("/api/Employee")
                 .then((res)=>{
                     setEmployee(res.data);
                 })
-                .catch((error)=>setError("Unable to Fetch Employee List"+error));
+                .catch((error)=>setError((curerror)=>[...curerror, "Unable to Fetch Employee List"+error]));
         }
 
         // /*
@@ -43,12 +45,8 @@ const EmployeeAttendanceComp = () => {
         ,[]);
         // */
 
-
-        
-
-     
-    
         const handleMarkAttendance = (event) => {
+            event.preventDefault();
 
             const currentTime=new Date().toLocaleTimeString('en-GB', {hour12:false});
 
@@ -67,7 +65,7 @@ const EmployeeAttendanceComp = () => {
 
                 //IF EMPLOYEE NOT FOUND
                 if(emp == null){
-                    setError("Unable to find Employee, Contact Admin to Add you");
+                    setError((curerror)=>[...curerror, "Unable to find Employee, Contact Admin to Add you"]);
                 }
                 //IF EMPLOYEE FOUND
                 else{
@@ -80,11 +78,11 @@ const EmployeeAttendanceComp = () => {
 
                     POST("/api/Attendance", attendanceObj)
                         .then(()=>{
-                            window.alert("Logged Successfully");
+                            setError((curerror)=>[...curerror, `Attendance Logged for ${emp.empId}`]);
+                            getAttendance();
                         })
-                        .catch(()=>setError("Unable to Log Attendance"));
+                        .catch(()=>setError((curerror)=>[...curerror, "Unable to Log Attendance"]));
                         
-
                 }
             }
             //IF ATTENDANCE FOUND
@@ -102,19 +100,53 @@ const EmployeeAttendanceComp = () => {
                     
 
                     PUT(`/api/Attendance/${attendanceObj.empId}`, attendanceObj)
-                        .then(()=>window.alert("Loggout Successfully"))
-                        .catch(()=>setError("Unable to Loggout"));
+                        .then(()=>{
+                            setError((curerror)=>[...curerror, `Attendance LoggedOut for ${emp.empId}`]);
+                            getAttendance();
+                        })
+                        .catch(()=>setError((curerror)=>[...curerror, "Unable to Loggout"]));
                 }
                 //IF outTime IS EMPTY
                 else{
                     window.alert("You have already loggout");
                 }
             }
+
+
         }
+
+
+        const removeAttendance = (empId) =>{
+            DELETE(`api/Attendance/${empId}`)
+                .then(()=>setError((curerror)=>[...curerror, `Attendance Deleted for ${empId}`]))
+                .catch((error)=>setError((curerror)=>[...curerror, `Unable to remove Attendance`+error]));
+
+            getAttendance();
+        }
+
+        const hideFun = (id) => {
+            document.getElementById(id).style.display = "none";
+        }
+    
 
     return(
         <div>
-            {error && window.alert(error)}     
+            {error.length != 0 && 
+                <div>
+                    <button className={`btn btn-danger ${modcss.clearBtn}`} onClick={()=>setError([])}>
+                        Clear All <ClearIcon/>
+                    </button>
+                    {error.map((val, index)=>{
+                        return (
+                            <div className={modcss.errors} id={`error${index}`}>
+                                <span onClick={()=>hideFun(`error${index}`)} className={modcss.closeBtn}><HighlightOffIcon/> </span>
+                                <span>{val}</span>
+                            </div>
+                        )
+                            
+                    })}
+                </div>
+            }     
 
             <form onSubmit={handleMarkAttendance}>
                 <input type="text" name="userempId" value={userempId} onChange={(e)=>setUserempId(e.target.value)}></input>
@@ -132,6 +164,8 @@ const EmployeeAttendanceComp = () => {
                                 <th>Employee Name</th>
                                 <th>inTime</th>
                                 <th>outTime</th>
+                                {!!sessionStorage.getItem("user")&&
+                                    <th>Remove</th>}
                             </tr>
                         </thead>
                         <tbody>
@@ -141,6 +175,10 @@ const EmployeeAttendanceComp = () => {
                                     <td>{record.empName}</td>
                                     <td>{record.inTime}</td>
                                     <td>{record.outTime || 'N/A'}</td>
+                                    {!!sessionStorage.getItem("user")&&
+                                    <th><span onClick={()=>removeAttendance(record.empId)}>
+                                        <HighlightOffIcon/>
+                                    </span></th>}
                                 </tr>
                             ))}
                         </tbody>

@@ -119,6 +119,22 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "AttendanceTask.Controllers.AttendanceController",
+    "Method": "DeleteAttendance",
+    "RelativePath": "api/Attendance/{EmpId}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "EmpId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "AttendanceTask.Controllers.EmployeeController",
     "Method": "GetEmployee",
     "RelativePath": "api/Employee",

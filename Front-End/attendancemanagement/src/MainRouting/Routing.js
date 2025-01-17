@@ -10,15 +10,15 @@ import LoginComp from "../Layouts/LoginComp";
 
 
 const routing=createBrowserRouter([
-    {path:"",element:<HomeComp/>},
-    {path:"login",element:<LoginComp/>}, 
+    {path:"",element:<HomeComp/>, children:[
+        {path:"",element:<EmployeeAttendanceComp/>},
+        
+        {path:"addemployee",element:<ProtectedRouting Component={EmployeeAddComp}/>},
 
-   
-    {path:"addemployee",element:<ProtectedRouting Component={EmployeeAddComp}/>},
+        {path:"listemployee",element:<EmployeeDashComp/>},
 
-    {path:"listemployee",element:<EmployeeDashComp/>},
-
-    {path:"attendance",element:<EmployeeAttendanceComp/>},
+    ] },
+    {path:"login",element:<LoginComp/>},    
 
     //wildcart routing
     {path:"*",element:<PageNotFound/>}

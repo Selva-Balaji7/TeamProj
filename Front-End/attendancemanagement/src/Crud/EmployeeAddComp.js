@@ -1,72 +1,106 @@
-// import axios from 'axios';
-// import React, { useState } from 'react';
-// import { useNavigate } from 'react-router-dom';
-// import LogoutIcon from '@mui/icons-material/Logout';
-// //impoert usestate
-// //usenavigate
+import React, {  useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import { GET, POST } from '../Shared/HttpService';
+import modcss from '../css/EmployeeAddComp.module.css';
+import ClearIcon from '@mui/icons-material/Clear';
+import HighlightOffIcon from '@mui/icons-material/HighlightOff';
 
-// const EmployeeAddComp = () => {
-
-//     const nav=useNavigate();
-//     const[employee,setEmployee]=useState({
-//         eid:"",
-//         efullname:"",
-
-//     });
-
-//     const inputHandler=(event)=>{
-//         console.log(event);
-//         const {name,type,value}=event.target;
-//         setEmployee({...employee,[name]:value});
-//         console.log(event.target);
-//     }
+const EmployeeAddComp = () => {
+    const [employees, setEmployees] = useState([]);
+    const [error, setError] = useState([]);
+    const nav = useNavigate();
+    const [employee, setEmployee] = useState({
+        empId: "",
+        empName:""
+    });
+    
+    useEffect(()=>{
+        getEmployee()
+    }
+    ,[]  );
 
 
-//         const addEmployee=(event)=>{
-//             event.preventDefault();
-//             //console.log(product);
-//             axios.post(``,employee).then(()=>{
-//                 window.alert("Employee added succesfully");
-//                 nav('');
-//             }).catch((error)=>{})
-//         }
+    const getEmployee = () => {
+        GET(`/api/Employee`)
+        .then((res)=>{
+            setEmployees(res.data);            
+        })
+        .catch((error)=>setError((curerror)=>[...curerror, "Unable to Fetch Employee List"+error]));
+    }
 
-//         const logout=()=>{
-//             const nav=useNavigate();
-//             const isConfirmLogout=window.confirm("Are you sure you want to logout?");
-//             if(!isConfirmLogout){
-//                 sessionStorage.clear();
-//                 window.alert("Logout successful");
-//                 console.log("redirecting to login page!");
-//                 nav('/login');   
-//             }
-           
-            
-//         }
+    const inputHandler=(event)=>{
+        const {name,value}=event.target;
+        setEmployee({...employee,[name]:value});
+    }
+
+
+    const addEmployee=(event)=>{
+        event.preventDefault();
+
+        let index = -1;
+        employees.map((val, ind)=>{
+            if(val.empId == employee.empId)
+                index = ind;
+        });
+
+        if( index == -1 ){
+            POST("api/Employee", employee)
+                .then(()=>{
+                    setError((curerror)=>[...curerror, "Employee added succesfully "]);
+                    
+                })
+                .catch((error)=>setError((curerror)=>[...curerror, "Unable to Add Employee "+error]));
+        }
+        else{
+            setError((curerror)=>[...curerror, "Employee Already Exists "]);
+        }
+
+    }
         
+    const hideFun = (id) => {
+        document.getElementById(id).style.display = "none";
+    }
 
-//     return (
-//         <div>
+    return (
+        <div>
+             {error.length != 0 && 
+                <div>
+                    <button className={`btn btn-danger ${modcss.clearBtn}`} onClick={()=>setError([])}>
+                        Clear All <ClearIcon/>
+                    </button>
+                    {error.map((val, index)=>{
+                        return (
+                            <div className={modcss.errors} id={`error${index}`}>
+                                <span onClick={()=>hideFun(`error${index}`)} className={modcss.closeBtn}><HighlightOffIcon/> </span>
+                                <span>{val}</span>
+                            </div>
+                        )
+                            
+                    })}
+                </div>
+            } 
             
-//             <h2>List of Employees</h2>
-//             <div className='row'>
-//                 <div className='col-sm-3'></div>
-//                 <div className='col-sm-6'></div>
-//                 <div className='col-sm-3'></div>
+            <div className='row'>
+                <div className='col-sm-3'></div>
+                <div className='col-sm-6'>
+                    <h2>Add Employee</h2>
 
-//                 <form onSubmit={addEmployee}>
+                    <form onSubmit={addEmployee}>
 
-//                     <label className='form-label'>Enter Employee id</label>
-//                     <input type="number" name="eid" onChange={inputHandler} value={employee.eid} className='form-control'></input>
-//                     <label className='form-label'>Enter Employee name:</label>
-//                     <input type="text" name="ename" onChange={inputHandler} value={employee.eid} className='form-control'></input>
-                   
-//                     <button type="submit" className='btn btn-primary mt-2'> Add data</button>  
+                        <label className='form-label'>Enter Employee id</label>
+                        <input type="text" name="empId" onChange={inputHandler} value={employee.empId} className='form-control'></input>
+                        <label className='form-label'>Enter Employee name:</label>
+                        <input type="text" name="empName" onChange={inputHandler} value={employee.empName} className='form-control'></input>
+                    
+                        <button type="submit" className='btn btn-primary mt-2'> Add data</button>  
+                    </form>
 
-//                 </form>
-//             </div>
-//             <button className="btn btn-danger" onClick={logout}><LogoutIcon></LogoutIcon></button>
-//         </div>
-//     )
-// }
-// export default EmployeeAddComp;
+
+                </div>
+                <div className='col-sm-3'></div>
+
+            </div>            
+        </div>
+    )
+}
+export default EmployeeAddComp;

@@ -89,5 +89,23 @@ namespace AttendanceTask.Controllers
             return _context.Attendances.Any(a => a.EmpId == EmpId);
         }
 
+        [HttpDelete("{EmpId}")]
+        public async Task<IActionResult> DeleteAttendance(int EmpId)
+        {
+            var attendance = await _context.Attendances.FindAsync(EmpId);
+            if (attendance == null)
+            {
+                return NotFound();
+            }
+
+            _context.Attendances.Remove(attendance);
+            await _context.SaveChangesAsync();
+
+            return NoContent();
+        }
+
+
+
+
     }
 }

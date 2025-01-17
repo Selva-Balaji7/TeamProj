@@ -1,0 +1,13 @@
+.errors{
+    box-shadow: -3px 2px 5px 0px grey;
+    margin: 10px;
+    padding: 10px;
+}
+
+.clearBtn{
+    margin: 0px 10px;
+}
+
+.closeBtn{
+    color: red;
+}

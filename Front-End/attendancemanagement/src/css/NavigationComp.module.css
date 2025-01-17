@@ -1,0 +1,31 @@
+.navLink{
+    width: 200px;
+    margin: 10px 5px;
+    display: inline-block;
+    border-radius: 20px;
+}
+.navLink:hover{
+    transform: scale(1.02);
+}
+
+.linkContainer{
+    display: flex;          
+    justify-content: center;
+    flex-wrap: wrap;        
+    width: 100vw; 
+}
+
+.linkContainer2{
+    display: flex;          
+    justify-content: end;    
+    width: 100vw; 
+}
+.navLink2{
+    width: max-content;
+    margin: 10px 5px;
+    display: inline-block;
+    border-radius: 20px;
+}
+.navLink2:hover{
+    transform: scale(1.02);
+}
