@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import axios from 'axios';
 import React, { useEffect, useState } from 'react'
 
@@ -20,7 +21,7 @@ const EmployeeDashComp = () => {
         <div>
             <h2>Employee List</h2>
 
-            <Link to="" className='btn btn-primary me-2'> Add
+            <Link to="listemployee" className='btn btn-primary me-2'> Add
             </Link>
             <table className='table table-hover table-bordered table-striped text-center'>
                 <thead>
