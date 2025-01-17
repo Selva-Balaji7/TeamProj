@@ -1,6 +1,6 @@
 import React, { useEffect, useState} from 'react'
 import { GET, POST, PUT } from '../Shared/HttpService';
-import axios from 'axios';
+
 
 const EmployeeAttendanceComp = () => {
 
@@ -43,11 +43,6 @@ const EmployeeAttendanceComp = () => {
         ,[]);
         // */
 
-
-        
-
-     
-    
         const handleMarkAttendance = (event) => {
 
             const currentTime=new Date().toLocaleTimeString('en-GB', {hour12:false});

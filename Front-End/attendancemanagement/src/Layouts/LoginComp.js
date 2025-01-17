@@ -1,5 +1,6 @@
 import React, { useRef } from 'react'
 import  {useNavigate} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import axios from 'axios';
 
 import "./External.css"
@@ -12,15 +13,7 @@ const LoginComp = () => {
     const upassRef = useRef();
 
     const checkUser = () => {
-        // alert("login clicked");
-
-        // POST("http://localhost:8888/user", empObj ), then((response)=>{
-        //     if(response?.access){
-        //         handleSnackbarOpen("Login Successfullt", "success");
-        //         sessionStorage.setItem("accessToken", response?.access)
-        //     }
-        // })
-
+       
 
         let enteredUname = unameRef.current.value;
         let enteredUpass = upassRef.current.value;
@@ -48,8 +41,9 @@ const LoginComp = () => {
 
     return (
         <div className='loginContainer'>
-
-            <form className="loginform">
+            <Link to="homepage" classname="btn btn-info btm-sm me-4">Back</Link>
+            <h2 className="text-center">Please Login with Admin credentials</h2>
+            <form className="loginform" >
                 <label className="form-label">enter user Name:</label>
                 <input ref={unameRef} type="text" name="uid" id="uname" className="form-control mb-2 " ></input>
 
