@@ -2,8 +2,7 @@ import React, { useRef } from 'react'
 import  {useNavigate} from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
-
-import "./External.css"
+import { Button } from '@mui/material';
 
 const LoginComp = () => {
 
@@ -19,7 +18,7 @@ const LoginComp = () => {
         let enteredUpass = upassRef.current.value;
         // console.log(uid,upass);
 
-        axios.get("http://localhost:8080/user").then((res) => {
+        axios.get("http://localhost:8080/user1").then((res) => {
 
             //console.log(res);
             let currentUser = res.data.filter((val, index) => { return val.userName === enteredUname && val.userPassword === enteredUpass })
@@ -41,8 +40,10 @@ const LoginComp = () => {
 
     return (
         <div className='loginContainer'>
-            <Link to="homepage" classname="btn btn-info btm-sm me-4">Back</Link>
-            <h2 className="text-center">Please Login with Admin credentials</h2>
+            <Link to="/homepage">
+            <Button variant="contained">Back</Button>
+            </Link>
+            <h2 className="text-center" style={{fontWeight:"800",fontSize:"50px"}}>Please Login with Admin credentials</h2>
             <form className="loginform" >
                 <label className="form-label">enter user Name:</label>
                 <input ref={unameRef} type="text" name="uid" id="uname" className="form-control mb-2 " ></input>

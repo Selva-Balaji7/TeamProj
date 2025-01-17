@@ -1,5 +1,7 @@
 import React, { useEffect, useState} from 'react'
 import { GET, POST, PUT } from '../Shared/HttpService';
+import { Link } from 'react-router-dom';
+import { Button } from '@mui/material';
 
 
 const EmployeeAttendanceComp = () => {
@@ -11,9 +13,9 @@ const EmployeeAttendanceComp = () => {
         outTime:null
     };
 
-    const [employee, setEmployee] = useState([        ]);
+    const [employee, setEmployee] = useState([  ]);
 
-        const [attendance, setAttendance] = useState([        ]);
+        const [attendance, setAttendance] = useState([ ]);
 
         const [userempId, setUserempId] = useState("");
 
@@ -115,12 +117,15 @@ const EmployeeAttendanceComp = () => {
                 <input type="text" name="userempId" value={userempId} onChange={(e)=>setUserempId(e.target.value)}></input>
                 <button type="submit" className='btn btn-primary '>Mark Attendance</button>  
             </form>
-
+            <Link to="/homepage">
+            <Button variant="contained">Back</Button>
+            </Link>
             <h2>Attendance Records</h2>
                 {attendance.length === 0 ? (
                     <p>No attendance records found.</p>
                 ) : (
-                    <table border="1" style={{ width: '100%', marginTop: '20px' }}>
+                    
+                    <table border="1" style={{ width: '50%', marginTop: '20px' }}>
                         <thead>
                             <tr>
                                 <th>Employee ID</th>

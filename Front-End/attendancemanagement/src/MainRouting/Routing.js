@@ -11,14 +11,14 @@ import LoginComp from "../Layouts/LoginComp";
 
 const routing=createBrowserRouter([
     {path:"",element:<HomeComp/>},
-    {path:"login",element:<LoginComp/>}, 
+    {path:"/login",element:<LoginComp/>}, 
 
-   
-    {path:"addemployee",element:<ProtectedRouting Component={EmployeeAddComp}/>},
+     {path:"/homepage",element:<HomeComp/>}, //homepage routing
+    {path:"/addemployee",element:<ProtectedRouting Component={EmployeeAddComp}/>},
 
-    {path:"listemployee",element:<EmployeeDashComp/>},
+    {path:"/listemployee",element:<EmployeeDashComp/>},
 
-    {path:"attendance",element:<EmployeeAttendanceComp/>},
+    {path:"/attendance",element:<EmployeeAttendanceComp/>},
 
     //wildcart routing
     {path:"*",element:<PageNotFound/>}

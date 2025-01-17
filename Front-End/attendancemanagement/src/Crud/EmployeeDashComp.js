@@ -21,9 +21,13 @@ const EmployeeDashComp = () => {
         <div>
             <h2>Employee List</h2>
 
-            <Link to="listemployee" className='btn btn-primary me-2'> Add
+            <Link to="/homepage" className='btn btn-primary me-2'> Back
             </Link>
-            <table className='table table-hover table-bordered table-striped text-center'>
+
+            <div className='row'>
+
+
+            <table className='table table-hover table-bordered table-striped text-center' border="1" style={{ width: '50%', marginTop: '20px',justifyContent:"center",textAlign:"center" }}>
                 <thead>
                     <tr>
                         <th>Enployee id</th><th>Employee name</th><th>Date</th><th>In-Time</th><th>Out-Time</th>
@@ -49,6 +53,7 @@ const EmployeeDashComp = () => {
                 </tbody>
             </table>        
         </div>
+    </div>
     )
 }
 
