@@ -43,7 +43,7 @@ const LoginComp = () => {
             <Link to="/homepage">
             <Button variant="contained">Back</Button>
             </Link>
-            <h2 className="text-center" style={{fontWeight:"800",fontSize:"50px"}}>Please Login with Admin credentials</h2>
+            <h2 className="text-center">Please Login with Admin credentials</h2>
             <form className="loginform" >
                 <label className="form-label">enter user Name:</label>
                 <input ref={unameRef} type="text" name="uid" id="uname" className="form-control mb-2 " ></input>

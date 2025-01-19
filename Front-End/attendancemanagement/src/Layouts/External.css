@@ -1,75 +1,75 @@
-    body{
-       background-image: url('../assests/Company.jpg');
-        background-size:cover;
-       /* height:"100vh"; */
-
-    }
-    .card{
-    position: relative;
-    top: 75px;
-    box-shadow: -6px 7px 160px -3px inset;
-    width: 600px;
-    height: 500px;
-    margin: auto;
-    border-radius: 50px;
-    }
-    .card-header{
-        height: 130px;
-        align-content: center;
-        font-family: cursive;
-        font-size: xx-large;
-        background-color: rgb(43 169 146);
-    box-shadow: -1px 7px 26px 16px;
-    }
-    .card-body{
+     @media screen and (max-width: 1200px) { 
        
+    body{
+       background-image: url('../assests/Company.jpg');  
+       background-size: contain;
+        height:100vh;   
+        width:100vw;
     }
+    h2{
+        font-weight:"800";
+        font-size:"50px";
+        position: absolute;
+        top: 20%;
+        left: 25%;
+    }
+
+
     .list-group-item{
     height: 108px;
     align-content: center;
     }
     .loginContainer{
         
-        border: 6px solid black;
         width: 100vw;
         height: 100vh;
-        background-image: url('../assests/Company.jpg');
+        background-image: url(http://localhost:3000/static/media/Company.fc00c08….jpg);
         background-size: cover;
-        font-family: cursive;
         font-size: x-large;
         font-family: cursive;
         font-style: italic;
         font-weight: bold;
     }
     .loginform{
-    height: 350px;
-    align-content: center;
-    font-family: cursive;
-    font-size: x-large;
-    position: absolute;
-    background-color: #0dcaf063;
-    box-shadow: 30px 40px 26px 16px;
-    width: 350px;
-    padding: 30px;
-    top: 250px;
-    left: 430px;
+        height: 240px;
+        align-content: center;
+        font-family: cursive;
+        font-size: x-large;
+        position: absolute;
+        background-color: #0dcaf063;
+        box-shadow: 30px 40px 26px 16px;
+        width: 300px;
+        padding: 30px;
+        top: 40%;
+        left: 32%;
    
     } 
     form{
         background-color: #ffffffeb;
-        padding: 50px;
+        padding: 30px;
         position: absolute;
-        top: 200px;
-        left: 450px;
-        height: 300px;
-        width: 300px;
+        height: 250px;
+        width: 250px;
         box-sizing: content-box;
         border-radius: 25px;
         font-family: cursive;
         font-size: larger;
+        top: 25%;
+        left: 40%;
     }
     .table-hover
     {
-        width: 80%;
+       
+        position: absolute;
+        left: 28%;
+        top: 20%;
     }
+    
+    
+    .list-group-item{
+    height: 60px;
+    align-content: center;
+    }
+   
+}
   

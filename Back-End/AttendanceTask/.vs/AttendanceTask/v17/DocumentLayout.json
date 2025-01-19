@@ -1,29 +1,29 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\Attendance_Management\\Back-End\\AttendanceTask\\",
+  "WorkspaceRootPath": "C:\\Users\\tharu\\OneDrive\\Desktop\\Attendance Management\\Back-End\\AttendanceTask\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{C6F0FD6C-5085-4313-8BB4-2D4D3A6B8FB2}|AttendanceTask.csproj|d:\\attendance_management\\back-end\\attendancetask\\models\\attendancedbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{C6F0FD6C-5085-4313-8BB4-2D4D3A6B8FB2}|AttendanceTask.csproj|c:\\users\\tharu\\onedrive\\desktop\\attendance management\\back-end\\attendancetask\\models\\attendancedbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C6F0FD6C-5085-4313-8BB4-2D4D3A6B8FB2}|AttendanceTask.csproj|solutionrelative:models\\attendancedbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C6F0FD6C-5085-4313-8BB4-2D4D3A6B8FB2}|AttendanceTask.csproj|d:\\attendance_management\\back-end\\attendancetask\\controllers\\employeecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{C6F0FD6C-5085-4313-8BB4-2D4D3A6B8FB2}|AttendanceTask.csproj|c:\\users\\tharu\\onedrive\\desktop\\attendance management\\back-end\\attendancetask\\controllers\\employeecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C6F0FD6C-5085-4313-8BB4-2D4D3A6B8FB2}|AttendanceTask.csproj|solutionrelative:controllers\\employeecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C6F0FD6C-5085-4313-8BB4-2D4D3A6B8FB2}|AttendanceTask.csproj|d:\\attendance_management\\back-end\\attendancetask\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{C6F0FD6C-5085-4313-8BB4-2D4D3A6B8FB2}|AttendanceTask.csproj|c:\\users\\tharu\\onedrive\\desktop\\attendance management\\back-end\\attendancetask\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C6F0FD6C-5085-4313-8BB4-2D4D3A6B8FB2}|AttendanceTask.csproj|solutionrelative:controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C6F0FD6C-5085-4313-8BB4-2D4D3A6B8FB2}|AttendanceTask.csproj|d:\\attendance_management\\back-end\\attendancetask\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{C6F0FD6C-5085-4313-8BB4-2D4D3A6B8FB2}|AttendanceTask.csproj|c:\\users\\tharu\\onedrive\\desktop\\attendance management\\back-end\\attendancetask\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C6F0FD6C-5085-4313-8BB4-2D4D3A6B8FB2}|AttendanceTask.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C6F0FD6C-5085-4313-8BB4-2D4D3A6B8FB2}|AttendanceTask.csproj|d:\\attendance_management\\back-end\\attendancetask\\controllers\\attendancecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{C6F0FD6C-5085-4313-8BB4-2D4D3A6B8FB2}|AttendanceTask.csproj|c:\\users\\tharu\\onedrive\\desktop\\attendance management\\back-end\\attendancetask\\controllers\\attendancecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C6F0FD6C-5085-4313-8BB4-2D4D3A6B8FB2}|AttendanceTask.csproj|solutionrelative:controllers\\attendancecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C6F0FD6C-5085-4313-8BB4-2D4D3A6B8FB2}|AttendanceTask.csproj|d:\\attendance_management\\back-end\\attendancetask\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "AbsoluteMoniker": "D:0:0:{C6F0FD6C-5085-4313-8BB4-2D4D3A6B8FB2}|AttendanceTask.csproj|c:\\users\\tharu\\onedrive\\desktop\\attendance management\\back-end\\attendancetask\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{C6F0FD6C-5085-4313-8BB4-2D4D3A6B8FB2}|AttendanceTask.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     }
   ],
@@ -34,21 +34,17 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
-            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "AttendanceDbContext.cs",
-              "DocumentMoniker": "D:\\Attendance_Management\\Back-End\\AttendanceTask\\Models\\AttendanceDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\tharu\\OneDrive\\Desktop\\Attendance Management\\Back-End\\AttendanceTask\\Models\\AttendanceDbContext.cs",
               "RelativeDocumentMoniker": "Models\\AttendanceDbContext.cs",
-              "ToolTip": "D:\\Attendance_Management\\Back-End\\AttendanceTask\\Models\\AttendanceDbContext.cs",
+              "ToolTip": "C:\\Users\\tharu\\OneDrive\\Desktop\\Attendance Management\\Back-End\\AttendanceTask\\Models\\AttendanceDbContext.cs",
               "RelativeToolTip": "Models\\AttendanceDbContext.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAXAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-01-15T11:52:09.019Z",
               "EditorCaption": ""
@@ -57,9 +53,9 @@
               "$type": "Document",
               "DocumentIndex": 1,
               "Title": "EmployeeController.cs",
-              "DocumentMoniker": "D:\\Attendance_Management\\Back-End\\AttendanceTask\\Controllers\\EmployeeController.cs",
+              "DocumentMoniker": "C:\\Users\\tharu\\OneDrive\\Desktop\\Attendance Management\\Back-End\\AttendanceTask\\Controllers\\EmployeeController.cs",
               "RelativeDocumentMoniker": "Controllers\\EmployeeController.cs",
-              "ToolTip": "D:\\Attendance_Management\\Back-End\\AttendanceTask\\Controllers\\EmployeeController.cs",
+              "ToolTip": "C:\\Users\\tharu\\OneDrive\\Desktop\\Attendance Management\\Back-End\\AttendanceTask\\Controllers\\EmployeeController.cs",
               "RelativeToolTip": "Controllers\\EmployeeController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAACcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -69,9 +65,9 @@
               "$type": "Document",
               "DocumentIndex": 3,
               "Title": "Program.cs",
-              "DocumentMoniker": "D:\\Attendance_Management\\Back-End\\AttendanceTask\\Program.cs",
+              "DocumentMoniker": "C:\\Users\\tharu\\OneDrive\\Desktop\\Attendance Management\\Back-End\\AttendanceTask\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "D:\\Attendance_Management\\Back-End\\AttendanceTask\\Program.cs",
+              "ToolTip": "C:\\Users\\tharu\\OneDrive\\Desktop\\Attendance Management\\Back-End\\AttendanceTask\\Program.cs",
               "RelativeToolTip": "Program.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -81,9 +77,9 @@
               "$type": "Document",
               "DocumentIndex": 2,
               "Title": "AdminController.cs",
-              "DocumentMoniker": "D:\\Attendance_Management\\Back-End\\AttendanceTask\\Controllers\\AdminController.cs",
+              "DocumentMoniker": "C:\\Users\\tharu\\OneDrive\\Desktop\\Attendance Management\\Back-End\\AttendanceTask\\Controllers\\AdminController.cs",
               "RelativeDocumentMoniker": "Controllers\\AdminController.cs",
-              "ToolTip": "D:\\Attendance_Management\\Back-End\\AttendanceTask\\Controllers\\AdminController.cs",
+              "ToolTip": "C:\\Users\\tharu\\OneDrive\\Desktop\\Attendance Management\\Back-End\\AttendanceTask\\Controllers\\AdminController.cs",
               "RelativeToolTip": "Controllers\\AdminController.cs",
               "ViewState": "AgIAAAgAAAAAAAAAAAAxwBYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -93,9 +89,9 @@
               "$type": "Document",
               "DocumentIndex": 4,
               "Title": "AttendanceController.cs",
-              "DocumentMoniker": "D:\\Attendance_Management\\Back-End\\AttendanceTask\\Controllers\\AttendanceController.cs",
+              "DocumentMoniker": "C:\\Users\\tharu\\OneDrive\\Desktop\\Attendance Management\\Back-End\\AttendanceTask\\Controllers\\AttendanceController.cs",
               "RelativeDocumentMoniker": "Controllers\\AttendanceController.cs",
-              "ToolTip": "D:\\Attendance_Management\\Back-End\\AttendanceTask\\Controllers\\AttendanceController.cs",
+              "ToolTip": "C:\\Users\\tharu\\OneDrive\\Desktop\\Attendance Management\\Back-End\\AttendanceTask\\Controllers\\AttendanceController.cs",
               "RelativeToolTip": "Controllers\\AttendanceController.cs",
               "ViewState": "AgIAACAAAAAAAAAAAAAwwDQAAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -105,9 +101,9 @@
               "$type": "Document",
               "DocumentIndex": 5,
               "Title": "appsettings.json",
-              "DocumentMoniker": "D:\\Attendance_Management\\Back-End\\AttendanceTask\\appsettings.json",
+              "DocumentMoniker": "C:\\Users\\tharu\\OneDrive\\Desktop\\Attendance Management\\Back-End\\AttendanceTask\\appsettings.json",
               "RelativeDocumentMoniker": "appsettings.json",
-              "ToolTip": "D:\\Attendance_Management\\Back-End\\AttendanceTask\\appsettings.json",
+              "ToolTip": "C:\\Users\\tharu\\OneDrive\\Desktop\\Attendance Management\\Back-End\\AttendanceTask\\appsettings.json",
               "RelativeToolTip": "appsettings.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAADwAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",

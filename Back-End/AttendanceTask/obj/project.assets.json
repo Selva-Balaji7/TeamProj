@@ -4966,23 +4966,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\bejesh.sriram\\.nuget\\packages\\": {},
+    "C:\\Users\\tharu\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Attendance_Management\\Back-End\\AttendanceTask\\AttendanceTask.csproj",
+      "projectUniqueName": "C:\\Users\\tharu\\OneDrive\\Desktop\\Attendance Management\\Back-End\\AttendanceTask\\AttendanceTask.csproj",
       "projectName": "AttendanceTask",
-      "projectPath": "D:\\Attendance_Management\\Back-End\\AttendanceTask\\AttendanceTask.csproj",
-      "packagesPath": "C:\\Users\\bejesh.sriram\\.nuget\\packages\\",
-      "outputPath": "D:\\Attendance_Management\\Back-End\\AttendanceTask\\obj\\",
+      "projectPath": "C:\\Users\\tharu\\OneDrive\\Desktop\\Attendance Management\\Back-End\\AttendanceTask\\AttendanceTask.csproj",
+      "packagesPath": "C:\\Users\\tharu\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\tharu\\OneDrive\\Desktop\\Attendance Management\\Back-End\\AttendanceTask\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\bejesh.sriram\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\tharu\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -5062,5 +5062,13 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.101/PortableRuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "NU1900",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Error occurred while getting package vulnerability data: Unable to load the service index for source https://api.nuget.org/v3/index.json."
+    }
+  ]
 }

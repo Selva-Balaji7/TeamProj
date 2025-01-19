@@ -1,84 +1,112 @@
-import axios from 'axios';
-import React, { useState } from 'react';
+import React, {  useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import LogoutIcon from '@mui/icons-material/Logout';
-import { Link } from 'react-router-dom';
+import { GET, POST } from '../Shared/HttpService';
+import modcss from '../css/EmployeeAddComp.module.css';
+import ClearIcon from '@mui/icons-material/Clear';
+import HighlightOffIcon from '@mui/icons-material/HighlightOff';
 import { Button } from '@mui/material';
-
-//impoert usestate
-//usenavigate
+import {Link} from 'react-router-dom';
 
 const EmployeeAddComp = () => {
-
-    const nav=useNavigate();
-    const[employee,setEmployee]=useState({
-        eid:"",
-        efullname:"",
-
+    const [employees, setEmployees] = useState([]);
+    const [error, setError] = useState([]);
+    const nav = useNavigate();
+    const [employee, setEmployee] = useState({
+        empId: "",
+        empName:""
     });
+    
+    useEffect(()=>{
+        getEmployee()
+    }
+    ,[]  );
+
+
+    const getEmployee = () => {
+        GET(`/api/Employee`)
+        .then((res)=>{
+            setEmployees(res.data);            
+        })
+        .catch((error)=>setError((curerror)=>[...curerror, "Unable to Fetch Employee List"+error]));
+    }
 
     const inputHandler=(event)=>{
-        console.log(event);
-        const {name,type,value}=event.target;
+        const {name,value}=event.target;
         setEmployee({...employee,[name]:value});
-        console.log(event.target);
     }
 
 
-        const addEmployee=(event)=>{
-            event.preventDefault();
-            //console.log(product);
-            axios.post(``,employee).then(()=>{
-                window.alert("Employee added succesfully");
-                nav('');
-            }).catch((error)=>{})
+    const addEmployee=(event)=>{
+        event.preventDefault();
+
+        let index = -1;
+        employees.map((val, ind)=>{
+            if(val.empId == employee.empId)
+                index = ind;
+        });
+
+        if( index == -1 ){
+            POST("api/Employee", employee)
+                .then(()=>{
+                    setError((curerror)=>[...curerror, "Employee added succesfully "]);
+                    
+                })
+                .catch((error)=>setError((curerror)=>[...curerror, "Unable to Add Employee "+error]));
+        }
+        else{
+            setError((curerror)=>[...curerror, "Employee Already Exists "]);
         }
 
-        const logout=()=>{
-            const isConfirmLogout=window.confirm("Are you sure you want to logout?");
-            if(!isConfirmLogout){
-                sessionStorage.clear();
-                window.alert("Logout successful");
-                console.log("redirecting to login page!");
-                nav('/login');   
-            }
-           
-            
-        }
+    }
         
+    const hideFun = (id) => {
+        document.getElementById(id).style.display = "none";
+    }
 
     return (
         <div>
-            
-           
+             {error.length != 0 && 
+                <div>
+                    <button className={`btn btn-danger ${modcss.clearBtn}`} onClick={()=>setError([])}>
+                        Clear All <ClearIcon/>
+                    </button>
+                    {error.map((val, index)=>{
+                        return (
+                            <div className={modcss.errors} id={`error${index}`}>
+                                <span onClick={()=>hideFun(`error${index}`)} className={modcss.closeBtn}><HighlightOffIcon/> </span>
+                                <span>{val}</span>
+                            </div>
+                        )
+                            
+                    })}
+                </div>
+            } 
+              <Link to="/homepage">
+            <Button variant="contained">Back</Button>
+            </Link>
+            <Link to="/listemployee">
+            <Button  className='btn btn-info' variant="contained">Refresh</Button>
+            </Link>
+            {/* <button className='btn btn-info' type='button'>Refresh</button> */}
             <div className='row'>
-                <div className='col-sm-4'></div>
-                <div className='col-sm-4'>
-                <form onSubmit={addEmployee}>
-                <h1 style={{fontFamily:"cursive",fontWeight:"500",fontSize:"25px",color:"#079a8e",justifyContent:"center",textAlign:"center"}}>Employee Registration</h1>
-                <br/><br/>
-                 <label className='form-label'>Enter Employee id</label>
-                 <input type="number" name="eid" onChange={inputHandler} value={employee.eid} className='form-control'></input>
-                 <label className='form-label'>Enter Employee name:</label>
-                <input type="text" name="ename" onChange={inputHandler} value={employee.ename} className='form-control'></input>
-                <br/>
-                 <div style={{ alignItems:"center", textAlign:"center"}}>
-                 <button type="submit" className='btn btn-primary mt-2'> Add data</button>  
-                 </div>
-               
-                </form>     
+                <div className='col-sm-3'></div>
+                <div className='col-sm-6'>
+                    <form onSubmit={addEmployee}>
+                        <h3>Register Employee</h3>
+                        <label className='form-label'>Enter Employee id</label>
+                        <input type="text" name="empId" onChange={inputHandler} value={employee.empId} className='form-control'></input>
+                        <label className='form-label'>Enter Employee name:</label>
+                        <input type="text" name="empName" onChange={inputHandler} value={employee.empName} className='form-control'></input>
+                    
+                        <button type="submit" className='btn btn-primary mt-2'> Add data</button>  
+                    </form>
 
 
                 </div>
-                <div className='col-sm-4'></div> 
-            </div>
-            <Link to="/login">
-            <Button style={{position:"absolute",left:"5px",top:"5px"}} variant="contained">Back</Button>
-            </Link>
-            <button className="btn btn-danger mt-2" style={{position:"absolute",right:"5px"}} onClick={logout}><LogoutIcon></LogoutIcon></button>
+                <div className='col-sm-3'></div>
+
+            </div>            
         </div>
     )
 }
 export default EmployeeAddComp;
-
-
