@@ -18,7 +18,7 @@ const LoginComp = () => {
         let enteredUpass = upassRef.current.value;
         // console.log(uid,upass);
 
-        axios.get("http://localhost:8080/user1").then((res) => {
+        axios.get("http://localhost:5180/").then((res) => {
 
             //console.log(res);
             let currentUser = res.data.filter((val, index) => { return val.userName === enteredUname && val.userPassword === enteredUpass })

@@ -74,7 +74,7 @@ const EmployeeDashComp = () => {
             <Link to="/addemployee" className='btn btn-primary me-2'> Add </Link>
             {/* <button className="btn btn-success" onClick={showAddEmp}>Add</button> */}
             
-            <Link to="/addemployee" className='btn btn-info me-2'> back</Link>
+            <Link to="/addemployee" className='btn btn-info me-2' style={{position:"absolute",left:"68%"}}> back</Link>
             <div id="addEmpForm">
                 <EmployeeAddComp/>
             </div>

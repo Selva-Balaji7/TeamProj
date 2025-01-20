@@ -112,20 +112,21 @@ const EmployeeAttendanceComp = () => {
     return(
         <div>
             {error && window.alert(error)}     
-
-            <form onSubmit={handleMarkAttendance}>
+            <div className='attendance-form' >
+            <form onSubmit={handleMarkAttendance} style={{height:"200px",width:"200px"}}>
+                <h3>Mark your attendance</h3>
                 <input type="text" name="userempId" value={userempId} onChange={(e)=>setUserempId(e.target.value)}></input>
                 <button type="submit" className='btn btn-primary '>Mark Attendance</button>  
             </form>
+            </div>
+           
             <Link to="/homepage">
             <Button variant="contained">Back</Button>
             </Link>
-            <h2>Attendance Records</h2>
-                {attendance.length === 0 ? (
-                    <p>No attendance records found.</p>
-                ) : (
+           
+                {attendance.length === 0 ? (  <p>No attendance records found.</p> ) : (
                     
-                    <table border="1" style={{ width: '50%', marginTop: '20px' }}>
+                    <table className="table table-success table-striped" border="1" style={{ width: '50%', marginTop: '20px' }}>
                         <thead>
                             <tr>
                                 <th>Employee ID</th>

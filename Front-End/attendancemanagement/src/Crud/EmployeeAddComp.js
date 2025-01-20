@@ -34,16 +34,23 @@ const EmployeeAddComp = () => {
         const {name,value}=event.target;
         setEmployee({...employee,[name]:value});
     }
-
+    const handleSubmit = (event) => {
+        event.preventDefault();
+        setEmployee({
+            empId: "",
+            empName: ""
+        })
+    }
 
     const addEmployee=(event)=>{
         event.preventDefault();
-
         let index = -1;
         employees.map((val, ind)=>{
             if(val.empId == employee.empId)
                 index = ind;
         });
+
+    
 
         if( index == -1 ){
             POST("api/Employee", employee)
@@ -84,9 +91,9 @@ const EmployeeAddComp = () => {
               <Link to="/homepage">
             <Button variant="contained">Back</Button>
             </Link>
-            <Link to="/listemployee">
-            <Button  className='btn btn-info' variant="contained">Refresh</Button>
-            </Link>
+           
+            <Button  className='btn btn-info' onClick={handleSubmit}>Refresh</Button>
+          
             {/* <button className='btn btn-info' type='button'>Refresh</button> */}
             <div className='row'>
                 <div className='col-sm-3'></div>
