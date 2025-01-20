@@ -6,7 +6,7 @@ import "./External.css"
 const HomeComp = () => {
     return (
         <div>
-        <div className="card" style={{position:"absolute",top:"30%",left:"40%",height:"300px",width:"250px",borderRadius:"10px"}}>
+        <div className="card" style={{position:"absolute",top:"50%",left:"50%",translate:"-50% -50%",height:"300px",width:"250px",borderRadius:"10px"}}>
         <div className="card-header" style={{ backgroundColor:"#13b2e3",justifyContent:"center",textAlign:"center",height:"70px"}}>
         <b>Employee Attendance System</b> 
         </div>

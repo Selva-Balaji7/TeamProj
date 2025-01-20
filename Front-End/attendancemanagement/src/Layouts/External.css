@@ -1,7 +1,7 @@
-     @media screen and (max-width: 1200px) { 
+     /* @media (min-width:0px) and  (max-width: 5000px) {  */
        
     body{
-       background-image: url('../assests/Company.jpg');  
+       background-image: url('../assests/Company.jpg'); 
        background-size: contain;
         height:100vh;   
         width:100vw;
@@ -23,8 +23,8 @@
         
         width: 100vw;
         height: 100vh;
-        background-image: url(http://localhost:3000/static/media/Company.fc00c08….jpg);
-        background-size: cover;
+        /* background-image: url(http://localhost:3000/static/media/Company.fc00c08….jpg);
+        background-size: cover; */
         font-size: x-large;
         font-family: cursive;
         font-style: italic;
@@ -40,8 +40,9 @@
         box-shadow: 30px 40px 26px 16px;
         width: 300px;
         padding: 30px;
-        top: 40%;
-        left: 32%;
+        top: 50%;
+        left: 50%;
+        translate:-50% -50%;
    
     } 
     form{
@@ -54,15 +55,17 @@
         border-radius: 25px;
         font-family: cursive;
         font-size: larger;
-        top: 25%;
-        left: 35%;
+        top: 50%;
+        left: 50%;
+        translate:-50% -50%;
     }
     .table-hover
     {
        
         position: absolute;
-        left: 28%;
-        top: 20%;
+        left: 50%;
+        top: 50%;
+        translate:-50% -50%;
     }
     .table-success{
         position: absolute;
@@ -95,7 +98,11 @@
         position: absolute;
         left: 59%;
     }
+    .logout{
+        position: absolute;
+        right: 0px;
+    }
     
    
-}
+
   

@@ -4,6 +4,7 @@ import { GET, POST } from '../Shared/HttpService';
 import modcss from '../css/EmployeeAddComp.module.css';
 import ClearIcon from '@mui/icons-material/Clear';
 import HighlightOffIcon from '@mui/icons-material/HighlightOff';
+import LogoutIcon from '@mui/icons-material/Logout';
 import { Button } from '@mui/material';
 import {Link} from 'react-router-dom';
 
@@ -18,6 +19,7 @@ const EmployeeAddComp = () => {
     
     useEffect(()=>{
         getEmployee()
+
     }
     ,[]  );
 
@@ -70,6 +72,11 @@ const EmployeeAddComp = () => {
         document.getElementById(id).style.display = "none";
     }
 
+    const loggout = () => {
+        sessionStorage.clear();
+        nav("/");
+    }
+
     return (
         <div>
              {error.length != 0 && 
@@ -93,6 +100,9 @@ const EmployeeAddComp = () => {
             </Link>
            
             <Button  className='btn btn-info' onClick={handleSubmit}>Refresh</Button>
+            <Link onClick={loggout} className='btn btn-dark logout'>
+              <LogoutIcon></LogoutIcon>Logout
+            </Link>
           
             {/* <button className='btn btn-info' type='button'>Refresh</button> */}
             <div className='row'>
