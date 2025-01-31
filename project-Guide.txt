@@ -1,0 +1,27 @@
+All Project Guides:
+
+IN SQL WORKBENCH:
+
+In MySQL, a schema is essentially a database. It is a container that holds tables, views, stored procedures, triggers, and other database objects.
+
+Creating a Schema in MySQL
+ using the CREATE SCHEMA or CREATE DATABASE command.
+
+Database and table creation: 
+
+Relationship Type	Implementation
+One-to-One (1:1)	PK → PK (or Unique FK)
+One-to-Many (1:M)	PK → FK
+Many-to-One (M:1)	FK → PK
+Many-to-Many (M:N)	Junction Table (2 FKs)
+
+
+
+
+1.User table:
+    Users have a one-to-many relationship with Attendance (one user can have
+multiple attendance records).
+	Users have a one-to-many relationship with Leave Requests (one user can
+submit multiple leave requests).
+	Users have a many-to-one relationship with Roles (each user has one role,
+but each role can belong to many users).
